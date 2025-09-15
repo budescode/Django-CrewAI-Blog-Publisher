@@ -32,8 +32,8 @@ A simple Django blog application that uses an autonomous multi-agent system buil
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/your-repo-name.git
-    cd your-repo-name
+    git clone git@github.com:budescode/Django-CrewAI-Blog-Publisher.git
+    cd Django-CrewAI-Blog-Publisher
     ```
 
 2.  **Create and activate a virtual environment:**
@@ -96,8 +96,4 @@ The crew will then proceed with the tasks: researching, writing, and finally upl
 └── README.md
 ```
 
------
 
-# Django-CrewAI-Blog-Publisher
-# Django-CrewAI-Blog-Publisher
-# Django-CrewAI-Blog-Publisher
