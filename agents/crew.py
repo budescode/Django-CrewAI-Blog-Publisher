@@ -1,5 +1,5 @@
 from crewai import Process, Crew
-from agents.agent import researcher, writer, research, write,  publisher, publish
+from agents.agent import researcher, writer, publisher, research, write, publish
 
 # Assemble a crew with planning enabled
 crew = Crew(

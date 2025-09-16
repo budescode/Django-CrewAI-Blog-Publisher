@@ -21,9 +21,7 @@ llm = LLM(
 )
 
 # Instantiate tools
-
 search_tool = SerperDevTool()
-
 blog_upload_tool = BlogUploadTool()
 
 
@@ -55,17 +53,21 @@ publisher = Agent(
     verbose=True
 )
 
+
+
 # Define tasks
 research = Task(
     description='Research the latest trends in the AI industry and provide a single title.',
     expected_output='An intruiging topic for a blog post about the AI industry, along with key points and references.',
     agent=researcher
+
 )
 
 write = Task(
     description="Write an engaging blog post about the title provided by the research analyst.",
     expected_output='A 10-paragraph blog post formatted in markdown with engaging, informative, and accessible content, avoiding complex jargon.',
     agent=writer,
+    context=[research] # Pass the output of the research task to the writer
     
 )
 
@@ -73,7 +75,8 @@ publish = Task(
     description="Publish the blog post to the Django application using the custom BlogUploadTool.",
     expected_output='A confirmation message indicating the blog post was successfully uploaded.',
     agent=publisher,
-    output_file='./new_published.md'  # The final blog post will be saved here
+    context=[write] # Pass the output of the write task to the publisher
+    
 )
 
 

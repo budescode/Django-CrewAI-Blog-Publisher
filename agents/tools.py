@@ -6,10 +6,11 @@ from pydantic import BaseModel, Field
 
 
 
+
 class BlogInput(BaseModel):
     """Input schema for BlogUploadTool."""
     title: str = Field(..., description="Title of the blog.")
-    content: str = Field(..., description="Contents of the blog of the blog.")
+    content: str = Field(..., description="Contents of the blog.")
 
 class BlogUploadTool(BaseTool):
     name: str = "blog_uploader"
@@ -23,4 +24,4 @@ class BlogUploadTool(BaseTool):
         Blog.objects.create(title=title, content=content)
         return "Blog post uploaded successfully."
         
-
+####

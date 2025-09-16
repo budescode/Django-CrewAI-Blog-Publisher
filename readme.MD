@@ -1,4 +1,4 @@
-A simple Django blog application that uses an autonomous multi-agent system built with **CrewAI** to automate the content creation and publishing process. The AI crew researches a topic, writes a complete blog post, and publishes it directly to the Django database. It's designed to run on a scheduled basis, generating and publishing a new blog post every four minutes.
+A simple Django blog application that uses an autonomous multi-agent system built with **CrewAI** to automate the content creation and publishing process. The AI crew researches a topic, writes a complete blog post, and publishes it directly to the Django database. It's designed to run on a scheduled basis, generating and publishing a new blog post periodically.
 
 ### Features
 

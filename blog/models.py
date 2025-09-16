@@ -11,10 +11,6 @@ class Blog(models.Model):
         return self.title
     
     def save(self, *args, **kwargs):
-        # Custom save logic can be added here
+        # Custom save logic to auto-generate slug from title
         self.slug = slugify(self.title)
         super().save(*args, **kwargs)
-
-
-class UploadFiles(models.Model):
-    file= models.FileField(upload_to='uploads/')
