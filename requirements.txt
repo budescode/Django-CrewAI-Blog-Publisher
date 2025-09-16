@@ -1,0 +1,4 @@
+APScheduler==3.11.0
+crewai==0.186.1
+crewai-tools==0.71.0
+Django==5.2.6

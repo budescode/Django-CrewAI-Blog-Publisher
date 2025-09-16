@@ -1,9 +1,8 @@
 from crewai import Agent, Task, LLM
 # Importing crewAI tools
 from crewai_tools import SerperDevTool
-    
 from dotenv import load_dotenv
-from blog_ai.agents.tools import BlogUploadTool
+from agents.tools import BlogUploadTool
 
 
 
