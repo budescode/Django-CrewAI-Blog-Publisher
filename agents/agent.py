@@ -1,15 +1,8 @@
 from crewai import Agent, Task, LLM
 # Importing crewAI tools
-from crewai_tools import (
-    SerperDevTool,
+from crewai_tools import SerperDevTool
     
-)
-
-
 from dotenv import load_dotenv
-
-
-
 from blog_ai.agents.tools import BlogUploadTool
 
 
@@ -34,7 +27,7 @@ search_tool = SerperDevTool()
 
 blog_upload_tool = BlogUploadTool()
 
-#docs_tool, file_tool,
+
 # Create agents
 researcher = Agent(
     llm=llm,
@@ -74,7 +67,7 @@ write = Task(
     description="Write an engaging blog post about the title provided by the research analyst.",
     expected_output='A 10-paragraph blog post formatted in markdown with engaging, informative, and accessible content, avoiding complex jargon.',
     agent=writer,
-    # output_file='blog-posts/new_post.md'  # The final blog post will be saved here
+    
 )
 
 publish = Task(
@@ -85,5 +78,3 @@ publish = Task(
 )
 
 
-# Execute tasks
-# crew.kickoff()

@@ -1,6 +1,5 @@
-from crewai import Agent, Process, Task, Crew, LLM
-from blog_ai.agents.tools import BlogUploadTool
-from agents.agent import llm, researcher, writer, research, write,  publisher, publish
+from crewai import Process, Crew
+from agents.agent import researcher, writer, research, write,  publisher, publish
 
 # Assemble a crew with planning enabled
 crew = Crew(
@@ -8,5 +7,5 @@ crew = Crew(
     tasks=[research, write, publish],
     process=Process.sequential,
     verbose=True,
-    planning=True,  # Enable planning feature
+    planning=True,  
 )

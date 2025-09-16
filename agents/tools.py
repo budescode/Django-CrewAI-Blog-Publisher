@@ -1,12 +1,7 @@
 from crewai.tools import BaseTool
 from typing import Type
 from pydantic import BaseModel, Field
-import requests
-import os
-import django
 
-# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "blog_ai.settings")
-# django.setup()
 
 
 

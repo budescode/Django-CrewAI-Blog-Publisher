@@ -1,4 +1,4 @@
-A simple Django blog application that uses an autonomous multi-agent system built with **CrewAI** to automate the content creation and publishing process. The AI crew researches a topic, writes a complete blog post, and publishes it directly to the Django database.
+A simple Django blog application that uses an autonomous multi-agent system built with **CrewAI** to automate the content creation and publishing process. The AI crew researches a topic, writes a complete blog post, and publishes it directly to the Django database. It's designed to run on a scheduled basis, generating and publishing a new blog post every four minutes.
 
 ### Features
 
@@ -85,13 +85,14 @@ The crew will then proceed with the tasks: researching, writing, and finally upl
 ├── blog_ai/           # Django project root
 ├── blog/              # Django blog app
 │   ├── models.py      # Contains the BlogPost model
+│   ├── apps.py        # Contains scheduling code to run periodically
 │   └── ...
 ├── agents/            # CrewAI agents and tasks
-│   ├── agent.py      # Contains the agents
-│   └── tools.py       #contains the tools used by the agents
-│   └── crew.py       #contains the crew
+│   ├── agent.py       # Contains the agents
+│   └── tools.py       # contains the tools used by the agents
+│   └── crew.py        # contains the crew
 
-├── manage.py            # The main script to run the CrewAI agents
+├── manage.py          # The main script to run the server
 ├── requirements.txt   # Project dependencies
 └── README.md
 ```
